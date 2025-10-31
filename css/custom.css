@@ -1,17 +1,25 @@
 :root {
+  /* */
+  --light-blue: #9dcef1;
+  --dark-blue: #28767b;
+  --light-brown: #c99d65;
+  --dark-brown: #7d5c33;
+  --darkest: #000000;
+  --lightest: #ffffff;
+
   /* Colours */
-  --color-bg: #cfceca; /* page background /*
+  --color-bg: var(--light-blue); /* page background /*
 
   /* Header */
-  --color-head-bg: #625e5c;
+  --color-head-bg: var(--light-brown);
 
   /* Logotype */
-  --color-logotype-bg: #2a2828;
-  --color-text-logotype: #c1bfb8;
+  --color-logotype-bg: var(--dark-blue);
+  --color-text-logotype: var(--lightest);
   --font-logotype-size: 1rem;
 
   /* Global menu */
-  --color-menu-bg: #5a5b5e;
+  --color-menu-bg: var(--light-blue);
   /* Links */
   --color-link-bg: #78766e;
   --color-link-hover: #fff; /* used */
