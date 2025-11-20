@@ -117,23 +117,27 @@ function clickben() {
   infobox1.classList.remove("hide");
   infobox2.classList.add("fadeIn");
   infobox2.classList.remove("hide");
-  document.querySelector(".info-text > h2").textContent = "Hvad man kan gøre";
 
-  infobox1.innerHTML = `<details><summary><h3>Giv hunden en tyggeven</h3></summary>
+  infobox1.innerHTML = `<details name="tygge"><summary><h3>Giv hunden en tyggeven</h3></summary>
 <div>
   <p class="ibp">
 Udskift dine lektier med noget mere hundevenligt!  
 Giv din hund et <strong>tyggeben, en bamse eller en gammel sok</strong>, før du begynder at lave lektier.  
 Hvis den har noget bedre at gnave i, lader den oftere dine papirer være i fred.
-</p>`;
-  infobox2.innerHTML = `<h3>Gør lektier kedelige (for hunden!)</h3>
-<p class="ibp">
+</p>
+</div>
+</details>`;
+  infobox2.innerHTML = `<details name="tygge"><summary><h3>Gør lektier kedelige (for hunden!)</h3></summary>
+<div>
+  <p class="ibp">
 Sprøjt lidt <em>citronvand eller eddike</em> på hjørnet af dine papirer –  
 hunde hader den lugt!  
 Så smager dansk grammatik pludselig <strong>mindre som kylling</strong> og mere som “ad!”.
 </p>
 </div>
 </details>`;
+  document.querySelector(".info-text > h2").textContent = "Taktikker";
+  document.querySelector("article > p").textContent = "Hvad du kan gøre";
 }
 /***************************EKSLUSIVT EMAIL HOTSPOT ***********************/
 console.log(emailHotspot);
@@ -164,21 +168,27 @@ function clickEmail() {
   infobox2.classList.add("fadeIn");
   infobox2.classList.remove("hide");
 
-  infobox1.innerHTML = `<h3>Beskyt dine lektier</h3>
+  infobox1.innerHTML = `<details name="beskyt"><summary><h3>Beskyt dine lektier</h3></summary>
+  <div>
 <p class="ibp">
 Opbevar dine lektier i en <strong>plastikmappe eller lynlåspose</strong> – helst lugtfri.  
 Læg tasken højt oppe, hvor hunden ikke kan nå, og undgå at have madrester i nærheden.  
 En sulten hund ser ingen forskel på et madpapir og et fysikprojekt!
-</p>`;
-  infobox2.innerHTML = `<h3>Hvis skaden ER sket...</h3>
+</p></div>
+</details>`;
+  infobox2.innerHTML = `<details name="beskyt"><summary><h3>Hvis skaden ER sket...</h3></summary>
+  <div>
   <img src="./img/laererGraf.svg" alt="graf over læreres response">
 <p class="ibp">
 Forklar læreren sandheden – men gør det med humor:  
 <em>“Min hund troede, at min stil var en snack med ekstra kommaer.”</em>  
 Vis evt. de <strong>tandmærkede sider</strong> som bevis.  
 Det hjælper, hvis du har et billede af den skyldige med skyldige øjne.
-</p>`;
-  document.querySelector(".info-text > h3").textContent = "Hvordan man beskytter lektierne eller forklarer læreren";
+</p></div>
+</details>`;
+  // document.querySelector(".info-text > h3").textContent = "Hvordan man beskytter lektierne eller forklarer læreren";
+  document.querySelector(".info-text > h2").textContent = "Før og efter";
+  document.querySelector("article > p").textContent = "Inden hunden fanger..";
 
   /*DOGTAIL ANIMATION*/
   // document.querySelector("#dogHead").addEventListener("click", tailWag);
