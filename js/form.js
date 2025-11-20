@@ -42,8 +42,20 @@ function submitter(e) {
   document.querySelector("#hNavnet").textContent = formData.get("hNavn");
   document.querySelector("#hAlderen").textContent = formData.get("alder");
   document.querySelector("#hRacen").textContent = document.querySelector("#hRacer").options[document.querySelector("#hRacer").selectedIndex].text;
+  let hed = formData.get("vHed");
+  if (hed == 5) {
+    document.querySelector("#vHeden").textContent = "Ekstremt";
+  } else if (hed == 4) {
+    document.querySelector("#vHeden").textContent = "Meget";
+  } else if (hed == 3) {
+    document.querySelector("#vHeden").textContent = "Lidt";
+  } else if (hed == 2) {
+    document.querySelector("#vHeden").textContent = "Ikke særlig";
+  } else if (hed == 1) {
+    document.querySelector("#vHeden").textContent = "Slet ikke";
+  }
 
-  document.querySelector("#vHeden").textContent = formData.get("vHed");
+  // document.querySelector("#vHeden").textContent = formData.get("vHed");
   document.querySelector("#faget").textContent = formData.get("skoleFag");
 
   //   document.querySelector("#navnet").innerHTML = `<h3>` + firstName + `</h3>`;
