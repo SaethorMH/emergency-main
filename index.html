@@ -1,119 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/burger.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
-  </head>
-  <body id="frontpage">
-    <header>
-      <nav>
-        <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
-        </ul>
-        <button class="burger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
-    <section id="main-disclamer">
-      <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
-        <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
-        </div>
-      </div>
-    </section>
-    <main>
-      <section id="daily">
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-        <article class="daily_card">
-          <img src="" alt="teaser_img" />
-          <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
-          </div>
-        </article>
-      </section>
-      <section id="breaking">
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-      </section>
-    </main>
 
-    <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="icon" type="image/svg" href="img/LHLogo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+
+  <title>LektieHaps</title>
+</head>
+
+<body id="frontpage">
+  <header>
+    <nav>
+      <div id="logotype-wrapper" class="logo">
+        <a href="index.html"> <img src="./img/LektieHapsLogo.svg" alt="Lektiehaps Logoet" id="logotext"></a>
+      </div>
+      <div>
+
+        <!-- <button id="darkmode">DARKMODE</button> -->
+        <label class="switch">
+          <input type="checkbox" id="darkmode">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <ul class="menu">
+        <li><a class="menuItem" href="instruction.html">Kend tegnene</a></li>
+        <li><a class="menuItem" href="register.html">Indberet</a></li>
+      </ul>
+      <button class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+  <section id="main-disclamer">
+    <div id="main-disclamer-content">
+      <img src="./img/LHLogo.svg" alt="ICON" id="iconic">
+      <div>
+        <h1>Lektie Ædende Hunde</h1>
+        <p class="sub">Utallige hunde er gået amok og er begyndt at spise folks lektier. </p>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section id="daily">
+      <article class="daily_card">
+        <img src="./img/dogInform.png" alt="teaser_img">
+        <div class="daily_text">
+          <h2>Information vedrørende påvirkede hunde</h2>
+          <p>
+            Er du i tvivl om din hund er påvirket og kunne finde på at spise dine lektier?
+            Læs vores nyeste information omkring hvordan du genkender trækkene samt hvordan du bedst
+            muligt mindsker/forhindrer udviklingen af lektiegalskaben.
+          </p>
+          <a href="./instruction.html" class="cta_btn">Se mere</a>
+        </div>
+      </article>
+      <article class="daily_card">
+        <img src="./img/dogQuestion1.png" alt="teaser_img">
+        <div class="daily_text">
+          <h2>Er du et offer af lektie tab?</h2>
+          <p>
+            Har du mistet lektier via en hunds mund og/eller onde intentioner?
+            udfyld vores formular så vi kan få bedre indsigt i hvordan raseriet spreder sig.
+          </p>
+          <a href="./register.html" class="cta_btn">Se mere</a>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="breaking">
+
+      <article class="news_card">
+        <h3>Hunde jager lektier</h3>
+        <p>Stigende antal af børn med skoletasker rappoterer hunde bander</p>
+        <img src="./img/DogPark.webp" alt="news_img" class="newsImg">
+
+        <dialog id="dialog1">
+          <form method="dialog">
+            <button id="close_btn" type="button">X</button>
+            <h2>Hundene jager elever med tasker på!</h2>
+            <p>
+              Der er blevet observeret et stigende antal <strong>firbenede lektietyve</strong> i skolegårdene landet
+              over.
+              Ifølge flere elever er hunde begyndt at <em>jage børn med skoletasker</em> – ikke fordi de er onde,
+              men fordi de ved, at der gemmer sig noget saftigt mellem matematikbogen og madpakken:
+              <strong>lektier!</strong>
+            </p>
+            <img src="./img/DogPark.webp" alt="Nogle hunde med en skoletaske og lektier">
+            <h3>Skolegården som hundepark</h3>
+            <p>
+              Vidner fortæller, at hundene lister sig ind i frikvarteret, snuser til taskerne og går til angreb –
+              ikke på børnene, men på stakkels stykker dansk stil og fysikopgaver.
+              En elev udtaler: <em>“Jeg prøvede at forklare min lærer, at en labrador løb med mit gruppearbejde – men
+                hun troede
+                ikke på mig!”</em>
+            </p>
+
+            <p>
+              Skolelederen opfordrer nu eleverne til at <strong>binde deres lektier fast i snor</strong> eller pakke dem
+              ind i
+              gulerodspapir –
+              da hunde åbenbart foretrækker dansk og matematik over grøntsager.
+            </p>
+
+
+
+
+
+          </form>
+        </dialog>
+        <button class="cta_btn" id="cta_open1">Læs mere</button>
+      </article>
+
+
+      <article class="news_card">
+        <h3>Hundene går efter 12 (med stjerne)</h3>
+        <p>Hundende ses jage de sværeste lektier først</p>
+        <img src="./img/sorryDog.webp" alt="news_img" class="newsImg">
+
+
+        <div popover id="popover2">
+          <!-- <form method="dialog"> --><button popovertarget="popover2">X</button>
+
+          <div>
+            <h2>De fleste hunde kan ikke styre sig – vælger de sværeste lektier først</h2>
+            <p>
+              Forskere (og nogle meget tålmodige ejere) har fundet ud af, at hunde ikke bare spiser lektier tilfældigt.
+              Nej, de <strong>vælger de sværeste først!</strong>
+            </p>
+          </div>
+
+          <img src="./img/sorryDog.webp" alt="Ked af det hund med lektie i munden">
+          <div>
+            <h3>Hvorfor netop de svære?</h3>
+            <p>
+              Eksperter mener, at hunde finder komplekse opgaver mere “krydret”.
+              En almindelig dansk stil smager måske som kiks, men en opgave i <em>brøkregning</em> eller
+              <em>grammatik</em>?
+              Det er en sand gourmetret for den akademiske labrador!
+            </p>
+          </div>
+
+
+          <p>
+            En golden retriever blev for nylig fanget med hele en 12-tal-opgave i munden.
+            Da ejeren forsøgte at tage den fra ham, knurrede hunden og gøede:
+            <strong>“VOV! Den her smager af topkarakter!”</strong> (ifølge oversættelsen fra en dansklærer med humor).
+          </p>
+
+          <p>
+            Så næste gang du mister dine lektier, så spørg ikke, hvor de blev af – spørg <em>hvilken hund der fik dem
+              først.</em>
+          </p>
+
+
+
+
+          <!-- </form> -->
+        </div>
+
+        <button class="cta_btn" popovertarget="popover2">Læs mere</button>
+      </article>
+
+
+      <article class="news_card">
+        <h3>Lærere beskyttelse</h3>
+        <p>Lærere har fundet tricks til at holde hundende tilbage</p>
+        <img src="./img/teacherHomework.webp" alt="news_img1" class="newsImg">
+        <div popover id="popover3">
+          <!-- <form method="dialog"> -->
+          <button popovertarget="popover3">X</button>
+
+          <h2>Lærere giver nu hunde lektier for at beskytte sig selv</h2>
+          <p>
+            Efter flere uheldige episoder, hvor hunde har forsøgt at <strong>spise både elever og
+              undervisningsplaner</strong>,
+            har lærerne taget sagen i egne hænder.
+            De har simpelthen begyndt at <em>uddele lektier til hundene!</em>
+          </p>
+          <img src="./img/teacherHomework.webp" alt="hund med lærer">
+          <h3>Hundelektier – en ny trend</h3>
+          <p>
+            En lærer fortæller: <em>“Jeg giver nu hver hund en lille opgave i grammatik.
+              Hvis de får nok at tygge på der, så lader de mig være i fred.”</em>
+            Flere skoler melder om succes – især efter at man begyndte at bruge baconlugtende papir.
+            Dog er der enkelte hunde, der afleverer deres lektier med <strong>tandmærker i kanten</strong> og en lille
+            pøl på
+            forsiden.
+          </p>
+
+          <p>
+            Ministeriet for Uddannelse har endnu ikke taget stilling til, om hunde skal tælle med i klassens
+            gennemsnit,
+            men én ting er sikkert: de <em>gør sig umage</em> – især når der er kødben som præmie!
+          </p>
+
+
+
+
+          <!-- </form> -->
+        </div>
+        <button class="cta_btn" popovertarget="popover3">Læs mere</button>
+      </article>
+
+
+    </section>
+  </main>
+
+  <footer>
+    <nav class="some">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="another">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="yetanother">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/burger.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dialog.js"></script>
+</body>
+
 </html>

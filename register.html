@@ -1,81 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/burger.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
-    <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
-  </head>
-  <body id="register">
-    <header>
-      <nav>
-        <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
-        </ul>
-        <button class="burger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
 
-    <main>
-      <h1>INDBERET</h1>
-      <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
-      </section>
-    </main>
-    <footer>
-      <nav class="some">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="another">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-      <nav class="yetanother">
-        <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-  </body>
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="icon" type="image/svg" href="img/LHLogo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <title>LektieHaps - Indberet</title>
+</head>
+
+<body id="register">
+  <header>
+    <nav>
+      <div id="logotype-wrapper" class="logo">
+        <a href="index.html"> <img src="./img/LektieHapsLogo.svg" alt="Lektiehaps Logoet" id="logotext"> </a>
+      </div>
+      <div>
+        <label class="switch">
+          <input type="checkbox" id="darkmode">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <ul class="menu">
+        <li><a class="menuItem" href="instruction.html">Kend tegnene </a></li>
+        <li><a class="menuItem" href="register.html">Indberet</a></li>
+      </ul>
+      <button class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Din Oplevelse</h1>
+    <section id="form-section">
+      <article id="form-info">
+        <h2>Har din hund spist dine lektier?</h2>
+        <p>Udfyld formen forneded for at indsende oplysningerne omkring dit seneste lektie-tab</p>
+      </article>
+      <form id="webform">
+        <div>
+          <fieldset>
+            <legend>
+              <h3>
+                Lidt om dig
+              </h3>
+            </legend>
+            <label for="fNavn">Hvad hedder du?</label>
+            <input type="text" name="fNavn" id="fNavn" placeholder="Dit Navn" required>
+            <fieldset>
+              <legend>Uddannelses Trin</legend>
+              <div class="grid_1-1">
+                <label for="folke">Folkeskole</label>
+                <input type="radio" name="school" id="folke" value="Folkeskolen">
+
+                <label for="gym">Gymnasiet</label>
+                <input type="radio" name="school" id="gym" value="Gymnasiet">
+
+                <label for="vider">Vidergående</label>
+                <input type="radio" name="school" id="vider" value="Vidergående">
+
+                <label for="astronaut">Astronaut</label>
+                <input type="radio" name="school" id="astronaut" value="Læser til Astronaut">
+              </div>
+
+
+
+
+            </fieldset>
+
+
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Lidt om din hund</h3>
+            </legend>
+            <label for="hNavn">Hvad hedder din vovse?</label>
+            <input type="text" name="hNavn" id="hNavn" placeholder="Snebold" required>
+            <div class="grid_1-1">
+              <div><label for="hRacer">Hundens race</label>
+                <select id="hRacer" required>
+                  <option name="hRacer" value="beagle">Beagle</option>
+                  <option name="hRacer" value="sntBernard">Saint Bernard</option>
+                  <option name="hRacer" value="husky">husky</option>
+                  <option name="hRacer" value="ligeglad">Ligeglad</option>
+                  <option name="hRacer" value="blanding">Ukendt Blanding</option>
+                  <option name="hRacer" value="andet">Andet</option>
+                </select>
+                <div class="andet">
+                  <label for="andenRace">Andet</label>
+                  <input type="text" name="andenRace" id="andenRace">
+                </div>
+              </div>
+              <div><label for="alder">Hundens Alder:</label><input type="number" name="alder" id="alder"></div>
+            </div>
+
+
+            <label for="hBillede">Send os et billede!</label>
+            <input type="file" name="hBillede" id="hBillede" accept=" image/*">
+
+
+
+            <!-- <p>hvad tror du din hunds motivation var?</p>
+            <div class="grid_1-1">
+              <label for="haevn">Hævn</label>
+              <input type="checkbox" name="motivation" id="haevn">
+              <label for="galskab">Galskab</label>
+              <input type="checkbox" name="motivation" id="galskab">
+              <label for="sult">Sult</label>
+              <input type="checkbox" name="motivation" id="sult">
+              <label for="kedsomhed">Kedsomhed</label>
+              <input type="checkbox" name="motivation" id="kedsomhed">
+              <label for="kritik">Den syntes du kunne gøre bedre</label>
+              <input type="checkbox" name="motivation" id="kritik">
+
+            </div> -->
+
+
+
+
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Lidt om lektien</h3>
+            </legend>
+
+            <label for="vHed">hvor vigtig var lektien?</label>
+            <input type="range" min="1" max="5" value="3" name="vHed" id="vHed">
+            <p id="svHed" style="text-align:center">50</p>
+            <p>Hvilket fag?</p>
+
+            <div class="grid_1-1">
+
+              <label for="mat">Matematik</label>
+              <input type="radio" name="skoleFag" id="mat" value="Matematik">
+              <label for="dan">Dansk</label>
+              <input type="radio" name="skoleFag" id="dan" value="Dansk">
+              <label for="lat">Latin</label>
+              <input type="radio" name="skoleFag" id="lat" value="Latin">
+              <label for="astro">Astrofysik</label>
+              <input type="radio" name="skoleFag" id="astro" value="Astrofysik">
+              <label for="andet">Andet</label>
+              <input type="radio" name="skoleFag" id="andet" value="Noget så specifikt at det er ligemeget">
+            </div>
+
+
+
+
+          </fieldset>
+          <fieldset>
+
+            <legend>
+              <h3>Grundlæggende for hændelsen</h3>
+            </legend>
+            <label for="dato">Hvornår?</label>
+            <input type="date" name="dato" id="dato" required>
+
+            <label for="sted">Hvor?</label>
+            <input type="text" name="sted" id="sted">
+
+            <p>hvad tror du din hunds motivation var?</p>
+            <div class="grid_1-1">
+              <label for="haevn">Hævn</label>
+              <input type="checkbox" name="motivation" id="haevn">
+              <label for="galskab">Galskab</label>
+              <input type="checkbox" name="motivation" id="galskab">
+              <label for="sult">Sult</label>
+              <input type="checkbox" name="motivation" id="sult">
+              <label for="kedsomhed">Kedsomhed</label>
+              <input type="checkbox" name="motivation" id="kedsomhed">
+              <label for="kritik">Den syntes du kunne gøre bedre</label>
+              <input type="checkbox" name="motivation" id="kritik">
+            </div>
+
+
+
+          </fieldset>
+        </div>
+        <input type="submit">
+
+      </form>
+    </section>
+    <section id="form-summary">
+      <h2>Summary</h2>
+      <article>
+        <h2>Rapport over hændelse</h2>
+        <h2>Offeret</h2>
+        <div class="grid_1-1">
+          <p>Navn:</p>
+          <p id="navnet"></p>
+          <p>Elev i/på:</p>
+          <p id="skolen"></p>
+        </div>
+
+
+        <h2>Hunden</h2>
+        <img src="https://www.picsum.photos/300/300" alt="">
+        <div class="grid_1-1">
+          <p>Navn:</p>
+          <p id="hNavnet"></p>
+          <p>Alder:</p>
+          <p id="hAlderen"></p>
+          <p>Race:</p>
+          <p id="hRacen"></p>
+        </div>
+        <h2>Lektien</h2>
+        <div class="grid_1-1">
+          <p>Vigtighed:</p>
+          <p id="vHeden"></p>
+          <p>Faget:</p>
+          <p id="faget"></p>
+        </div>
+
+
+
+        <h2>
+          Opsummering
+        </h2>
+        <p>Hunden , spiste lektier sandsynligvist grundet ekstrem og og og den dd/mm/yyyy i </p>
+
+
+
+
+
+        <!-- <p class="placeholder">Opsummering</p>
+        <img id="shBillede" src="" alt=""> -->
+      </article>
+    </section>
+  </main>
+  <footer>
+    <nav class="some">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="another">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+    <nav class="yetanother">
+      <ul>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+        <li><a href="">link</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/burger.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+
 </html>

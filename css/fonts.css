@@ -24,3 +24,8 @@
   font-weight: var(--font-weight-medium);
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Bangers";
+  src: url();
+}
