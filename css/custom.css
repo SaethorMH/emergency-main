@@ -1,14 +1,21 @@
-:root {
+html {
+  color-scheme: light;
+
   /* */
+
+  --contrast-orange: #cc3300;
   --light-blue: #9dcef1;
-  --dark-blue: #28767b;
+  --dark-blue: #285b7b;
   --light-brown: #c99d65;
   --dark-brown: #7d5c33;
-  --darkest: #000000;
-  --lightest: #ffffff;
+  --darkest: #0c0c2a;
+  --lightest: #fff1dd;
+  --dmToggle: yellow;
+
+  --make-lightest-filter: brightness(0) saturate(100%) invert(86%) sepia(0%) saturate(6427%) hue-rotate(276deg) brightness(112%) contrast(100%);
 
   /* Colours */
-  --color-bg: var(--light-blue); /* page background /*
+  --color-bg: var(--lightest); /* page background /*
 
   /* Header */
   --color-head-bg: var(--light-brown);
@@ -21,40 +28,53 @@
   /* Global menu */
   --color-menu-bg: var(--light-blue);
   /* Links */
-  --color-link-bg: #78766e;
+  --color-link-bg: var(--contrast-orange);
   --color-link-hover: #fff; /* used */
-  --color-link-active: #99958f; /* used */
+  --color-link-active: var(--dark-blue); /* used */
   --border-radius-links: 1px;
 
   /* Headlines og rubrik */
-  --font-h1-size: 1rem;
-  --font-sub1-size: 1rem;
-  --font-h2-size: 1rem;
-  --font-h3-size: 1rem;
-  --color-headline-bg: #4b4545;
-  --color-headline-text-page: #42413d;
+  --font-h1-size: 2.2rem;
+  --font-sub1-size: 1.2rem;
+  --font-h2-size: 2rem;
+  --font-h3-size: 1.2rem;
+  --color-headline-bg: var(--dark-blue);
+  --color-headline-text-page: var(--light-blue);
 
   /* Tekst */
-  --color-text: #000;
-  --color-text-inverted: #cdccc4;
+  --color-text: var(--darkest);
+  --color-text-inverted: var(--lightest);
 
   /*  Marginer */
   --margin-head-bottom: 5px;
 
   /* Borders */
-  --border-radius: 5px;
+  --border-radius: 10px;
 
   /* Cards */
-  --color-card-bg: #8a8585;
-  --color-cta-card-bg: #d5d2d0;
+  --color-card-bg: var(--light-brown);
+  --color-cta-card-bg: var(--dark-brown);
   /* news-cards */
-  --color-news-bg: #dbdad4;
-  --color-news-bg-inverted: #585a5e;
-  --color-cta-newscard-bg: #787473;
-  --color-cta-newscard-bg-inverted: #7b7d83;
+  --color-news-bg: var(--light-blue);
+  --color-news-bg-inverted: var(--dark-brown);
+  --color-cta-newscard-bg: var(--dark-blue);
+  --color-cta-newscard-bg-inverted: var(--light-brown);
 
   /* Fonts */
-  --font-family-sans: ui-sans-serif;
+  /****** HUSK AT DIFINÈRE ANDET STED!! ******/
+  --font-family-sans: Mulish;
+
+  h1 {
+    font-family: Bangers;
+  }
+  h2 {
+    font-family: Nobile;
+  }
+
+  /********************************************************************************************************************************
+  *********************************************************************************************************************************
+  ********************************************************************************************************************************/
+
   /* --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -71,7 +91,299 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #676161;
-  --color-infobox-1-bg: #cfcec6;
-  --color-infobox-2-bg: #969995;
+  --color-info-bg: var(--lightest);
+  --color-infobox-1-bg: var(--light-brown);
+  --color-infobox-2-bg: var(--dark-blue);
+
+  /*animations*/
+
+  /* Tail Animation*/
+  /* @keyframes wag {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(100deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  .tailWag {
+    animation: wag 1s;
+    -webkit-animation: wag 1s;
+    animation-iteration-count: 5;
+    -webkit-animation-iteration-count: 5;
+  } */
+
+  .hide {
+    visibility: hidden;
+  }
+
+  .fadeIn {
+    animation: fader 1s linear;
+  }
+
+  input,
+  label {
+    display: block;
+    background-color: var(--light-brown);
+    margin: auto;
+
+    padding: 5px;
+  }
+  input[type="text"] {
+    background-color: var(--lightest);
+    color: var(--darkest);
+  }
+  input[type="number"] {
+    background-color: var(--lightest);
+    color: var(--darkest);
+  }
+  input[type="file"] {
+    background-color: var(--contrast-orange);
+  }
+
+  fieldset > div {
+    border-style: solid none none none;
+  }
+  fieldset {
+    background-color: var(--light-brown);
+    color: var(--lightest);
+    padding: 0px 10px;
+    margin: 10px;
+  }
+  legend {
+    margin: 10px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    border-style: none none none solid;
+    border-color: var(--dark-blue);
+    border-radius: 5px;
+    padding: 6px;
+    border-width: 25px;
+  }
+}
+
+@keyframes fader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.rotate {
+  animation: rotater 1s linear;
+}
+
+@keyframes rotater {
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+dialog {
+  width: 40vw;
+  max-width: 65ch;
+  height: 80%;
+  align-items: center;
+  img {
+    margin: auto;
+    width: 60%;
+  }
+  button {
+    position: sticky;
+    /* grid-column: 2/3;
+    grid-row: 1/2; */
+    top: 0;
+    justify-self: end;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: var(--lightest);
+  }
+}
+#dialog1 {
+  background-color: var(--light-blue);
+}
+
+::backdrop {
+  backdrop-filter: blur(5px);
+}
+.daily_card > img {
+  border-radius: 20px;
+}
+
+[popover] {
+  max-width: 75vw;
+  width: 65ch;
+  height: 80vh;
+
+  transition: all 0.5s allow-discrete;
+  opacity: 0;
+  scale: 0;
+  rotate: -720deg;
+
+  &:popover-open {
+    display: grid;
+    background-color: var(--light-brown);
+    grid-column: 2fr 1fr;
+    opacity: 1;
+    scale: 1;
+    rotate: 0deg;
+
+    @starting-style {
+      opacity: 0;
+      scale: 0;
+      rotate: -720deg;
+    }
+  }
+
+  img {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/5;
+    margin: auto;
+  }
+  button {
+    position: sticky;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    top: 0;
+    justify-self: end;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: var(--lightest);
+  }
+
+  ::backdrop {
+    filter: blur(10px);
+  }
+}
+#logotext {
+  filter: var(--make-lightest-filter);
+  width: 60%;
+  min-width: 100px;
+  justify-self: center;
+}
+#logotext:hover {
+  filter: none;
+}
+[type="range"] {
+  width: 50%;
+  background: var(--contrast-orange);
+  color: pink;
+}
+html.dark {
+  color-scheme: dark;
+  --contrast-orange: #cc3300;
+  --light-blue: #2e3336;
+  --dark-blue: #5e676c;
+  --light-brown: #373129;
+  --dark-brown: #7e6c56;
+  --darkest: #f9ecc3;
+  --lightest: #2b2b32;
+  --dmToggle: lightgray;
+  --color-text-inverted: darkest;
+  --color-headline-text-page: darkest;
+  .burger .line {
+    background-color: #fffbfb;
+  }
+  fieldset {
+    color: var(--darkest);
+    legend {
+      color: var(--darkest);
+    }
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    background-color: #100d1c;
+    color: var(--darkest);
+  }
+  /* --make-lightest-filter: none; */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: transparent;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+  border: solid thin var(--darkest);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--dmToggle);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: transparent;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#iconic {
+  width: 15%;
+  max-width: 120px;
+}
+.newsImg {
+  max-height: 100px;
+  object-fit: cover;
+}
+footer {
+  background-color: var(--light-brown);
 }
