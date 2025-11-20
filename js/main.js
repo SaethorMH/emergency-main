@@ -9,9 +9,17 @@ const darkmode = document.querySelector("#darkmode");
 const html = document.querySelector("html");
 // html.classList.add("dark");
 
+if (localStorage.getItem("dm") == "true") {
+  html.classList.toggle("dark");
+}
 function toggleTheme() {
   console.log("switching dark");
   html.classList.toggle("dark");
+  if (html.classList.contains("dark")) {
+    localStorage.setItem("dm", "true");
+  } else {
+    localStorage.setItem("dm", "false");
+  }
 }
 
 darkmode.addEventListener("click", toggleTheme);
